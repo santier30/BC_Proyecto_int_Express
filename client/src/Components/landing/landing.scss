@@ -1,0 +1,103 @@
+.landing{
+    background-color: rgba(0, 0, 0, 0.849);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .prePage{
+        width: 100%;
+    }
+}
+.landingSec{
+    
+      width: 100%;
+      color: set-text-color(rgba(0, 0, 0, 0.809));
+      position: relative;
+      max-width: 1450px;
+      .button{
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        position : absolute;
+        font-size: 2rem;
+        color: #FFF;
+        cursor: pointer;
+        z-index: 1000000;
+      }
+      .right{
+        right: 0;
+        top: 50%;
+      }
+      .left{
+        left: 0;
+        top: 50%;
+      }
+      .landTitle{
+        text-align: center;
+        color: #eee;
+        padding: 5rem;
+        position: relative;
+        font-size: 2rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            height: 2px;
+            width: 5rem;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: $secondary-color;
+          }
+  }
+      .landingArticles{
+        position: relative;
+        display: flex;
+        flex-wrap: no-wrap;
+        overflow-x: hidden;
+        margin: 20px;
+        margin-bottom: 10rem;
+        
+        .scroll{
+            min-width: 100%;
+            
+            .wine_div{
+                
+                max-width: 100%;
+            }
+        }
+   
+  
+      h2{
+        color: white;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        font-size: 80%;
+      }
+}
+}
+@media (min-width: 700px) {
+    .landingSec{max-width: 800px;}
+    .scroll{
+        min-width: 50% !important;
+    }
+  }
+  @media (min-width: 1040px) {
+    .landingSec{max-width: 1140px}
+    .scroll{
+        min-width: 33% !important;
+    }
+  }
+  @media (min-width: 1350px) {
+    .landingSec{max-width: 1450px;}
+    .scroll{
+        min-width: 25% !important;
+    }
+  }
+  

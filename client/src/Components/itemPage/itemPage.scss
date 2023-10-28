@@ -1,0 +1,82 @@
+.itemPage{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.849);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 63px;
+}
+.itemSec{
+    width: 100%;
+    color: set-text-color(rgba(0, 0, 0, 0.809));
+    position: relative;
+    max-width: 1200px;
+    display: flex;
+    gap: 1rem;
+
+    .itemImg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+         img {
+        width: 300px;
+        max-height: 457px;
+        aspect-ratio: 1400/1600;
+      } 
+    }
+  .itemArt{
+    flex: 1;
+    .under{
+        margin-bottom: 1rem;
+        padding: .5rem;
+        border-bottom: 1px solid $secondary-color;
+    }
+    .under:nth-child(3){
+        padding: 0;
+        padding-bottom: 1.5rem;
+    }
+
+    .itemAdd{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        p{
+            margin: .5rem;
+            
+        }
+        .price{
+            color: #adacac;
+        }
+        .item-buttons{
+            margin: .5rem 0 1.5rem 0;
+            
+           width: 100%;
+           max-width: 100px;
+           display: flex;
+            button{
+                border: solid 1px #FFF;
+                width: 25%;
+                background-color: $secondary-color;
+            }
+            div{
+                border-top: solid 1px #FFF;
+                border-bottom: solid 1px #FFF;
+                width: 50%;
+                text-align: center;
+            }
+        }
+        .add{
+            padding: .3rem;
+            background-color: transparent;
+            border: 1px solid #adacac;
+            color: $secondary-color;
+            cursor: pointer;
+            &:active{
+            border: 1px solid #7b7b7b;
+
+            }
+        }
+    }
+  }
+}

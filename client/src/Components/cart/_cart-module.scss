@@ -1,0 +1,82 @@
+.cart{
+    display: none;
+    padding-top:2% ;
+    background-color: rgb(255, 255, 255);
+    z-index: 110;
+    position: fixed;
+    top: 63px;
+    right: 2%;
+    max-height: 80vh;
+    overflow: auto;
+    width: 100% ;//es solo para que se vea en movile por ahora en el proyecto final no se veria el modal y simpleente iria a la pag del carrito
+    box-shadow: 0 0 5px $secondary-color;
+    
+    #{&}_item{
+        border-bottom: $secondary-color 1px solid;
+        padding: 1rem;
+        &:hover{
+            z-index: 1000;
+            box-shadow: 0 0 .9rem rgba(0, 0, 0, 1);
+            
+        }
+        .cart-img{
+            height: 110px;
+            width: 110px;
+            
+        }
+    }
+    #{&}_item{
+        width: 100%;
+        display: flex;
+        .cart_item_content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .item-buttons{
+        input{
+            width: 1rem;
+            
+        }
+        button{
+            border-radius: 800rem;
+            background-color: $secondary-color;
+            border: none;
+            width: 18px;
+            padding: .3rem;
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+    #{&}_finish{
+        padding: 1rem;
+        div{
+            display: flex;
+            h2{
+                flex: 1;
+            }
+        }
+        button{
+            width: 100%;
+            padding: .6rem 0; 
+            background-color: rgba(0, 0, 0, 0.849);
+            border: none;
+            color: $secondary-color;
+            cursor: pointer;
+            &:hover{
+               color:#b9134f ; 
+            }
+        }
+    }
+}
+.show{
+    display:block ;
+}
+@include media-lg{
+    .cart{
+        width: 500px ;//es solo para que se vea en movile por ahora en el proyecto final no se veria el modal y simpleente iria a la pag del carrito
+    
+    }
+}

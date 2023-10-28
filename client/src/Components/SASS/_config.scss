@@ -1,0 +1,52 @@
+$primary-color: rgb(39, 39, 39);
+$secondary-color: #ea1d6f;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+@mixin media-min {
+  @media screen and (min-width: 350px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width: 640px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-miniXL {
+  @media screen and (min-width: 860px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

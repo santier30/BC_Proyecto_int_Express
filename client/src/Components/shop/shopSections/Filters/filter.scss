@@ -1,0 +1,79 @@
+.search{
+    background-color: rgba(0, 0, 0, 0.849);
+    padding: 2rem;
+    .search_form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            background-color: transparent;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            color:white;
+        }
+        .search-icon {
+            color: #aaa;
+            font-size: 1.3rem;
+          }
+        #searchBar{
+            width: 50%;
+            max-width: 500px;
+            padding: .5rem;
+            resize: none;
+            border: none;
+            background-color: transparent;
+            border-bottom: solid 1px #908f8f;
+            color: #FFF;
+            &:focus{
+            outline: none;
+            border-bottom: solid 1px #ddd;
+
+            }
+
+        }
+    }
+}
+.filter_flexbox{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.849);
+    flex-direction: column;
+    justify-content: center;
+    
+    .wine_filters{
+
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        list-style: none;
+        li:first-child{
+            border-bottom:solid 2px $secondary-color;
+            text-align: center;
+        }
+        li{
+            color: #FFF;
+            width:12rem;
+            font-size: 1.2rem;
+            label,input{
+                cursor: pointer;
+            }
+        }
+    }
+}
+@include media-md{
+    .filter_flexbox{
+        flex-direction: row;
+        justify-content: flex-start;
+        .wine_filters{
+            padding: 2rem ;
+            padding-right: 2rem;
+            margin:0;
+            width: 300px;
+            align-items: start;
+
+}
+    }
+}

@@ -1,0 +1,26 @@
+.wine {
+  
+    &_home {
+      background:
+        linear-gradient(
+          to right,
+          rgba($primary-color, 0.6),
+          rgba($primary-color, 0.3)
+        ),
+        url("../img/wooden-vs-metal-wine-rack_0382a1e9-1839-4a0d-91c7-1dd5c5b55ca8.jpg") center top;
+      background-size: cover;
+      color: set-text-color(rgba($primary-color, 0.3));
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+  
+    &_title {
+      color: $secondary-color;
+      margin: .5rem 0;
+      font-size: 2rem;
+    }}

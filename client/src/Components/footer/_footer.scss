@@ -1,0 +1,113 @@
+
+.footer {
+    background-color: #2f2f2f;
+.footer_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .footer_copy{
+        flex: 1;
+        color: #FFF;
+        font-size: .9rem;
+        display: flex;
+        img{
+            height: 52px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        a{
+            text-decoration: none;
+            color: $secondary-color;
+            &:hover{
+                color: #b9134f;
+            }
+        }
+    }
+    .footer_links {
+        gap: .5rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+        position: relative;
+        a {
+            z-index: 1;
+            height: 48px;
+            width: fit-content;
+            position: relative;
+            display: block;
+            transition: all .24s;
+            border-radius: .3rem;
+
+
+            &:hover > .footer_img {
+                visibility: hidden;
+                transform: translateY(-20px);
+                height: 1px;
+                width: 48px;
+            }
+
+            &:hover > .footer_img2 {
+                transform: translateY(0px);
+                visibility: visible;
+                height: 48px;
+            }
+            
+        }
+        .facebook:hover{
+            background-color: #1877f2;
+        }
+        .twitter:hover{
+            background-color: #000;
+        }
+        .instagram:hover{
+            background-color: #bc2a8d;
+        }
+        .tiktok:hover{
+            background-color: #000;
+        }
+        .youtube:hover{
+            background-color: #ff0000;
+        }
+        .whatsapp:hover{
+            background-color: #25d366;
+        }
+    }
+}
+&_img{
+    transition: all .20s;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+}
+&_img2{
+    padding: 8px;
+    transition: all .20s;
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    transform: translateY(46px);
+    z-index: 0;
+    height: 10px;
+    width: 48px;
+    
+}
+}
+@include media-lg{
+.footer{
+.footer_section {
+    flex-direction: row;
+
+.footer_copy{
+    flex: 1;
+
+
+}
+}
+}}
+@include media-xl{
+.footer_links{margin-right:5rem ;}
+}
