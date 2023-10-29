@@ -22,7 +22,7 @@ const Wine = ({wine})=>{
   const ctx = useContext(CartContext)
 
 const Add = ()=>{
-ctx.onAdd( wine.name,image, wine.price)
+ctx.onAdd( wine.name,image, wine.price ,wine.stock)
 }
     return(
     <div className="wine_div">
@@ -37,7 +37,7 @@ ctx.onAdd( wine.name,image, wine.price)
                   Add to Cart
                 </button>
               </div>
-              <p>{ wine.short_description}</p>
+              <p className='short_des'>{ wine.short_description}</p>
             </div>
             <h2>{ wine.name} ({ wine.stock})</h2>
             <h2>${ wine.price}</h2>

@@ -1,17 +1,20 @@
+
 .itemPage{
     width: 100%;
     background-color: rgba(0, 0, 0, 0.849);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 63px;
+    margin-top: 54px;
+    min-height: 90vh;
 }
 .itemSec{
-    width: 100%;
+    width: 98%;
     color: set-text-color(rgba(0, 0, 0, 0.809));
     position: relative;
     max-width: 1200px;
     display: flex;
+    flex-direction: column;
     gap: 1rem;
 
     .itemImg{
@@ -58,6 +61,7 @@
                 border: solid 1px #FFF;
                 width: 25%;
                 background-color: $secondary-color;
+                cursor: pointer;
             }
             div{
                 border-top: solid 1px #FFF;
@@ -80,3 +84,41 @@
     }
   }
 }
+.corner_botom1,
+.corner_top1,
+.corner_botom2,
+.corner_top2{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.corner_botom1{
+  bottom: -2%;
+  right: -9px;
+  border-bottom: 1px solid $secondary-color;
+  border-right:1px solid $secondary-color ;
+}
+.corner_top1{
+  top: -2%;
+  right:-9px;
+  border-top: 1px solid $secondary-color;
+  border-right:1px solid $secondary-color ;
+}
+.corner_botom2{
+    bottom: -2%;
+    left: -9px;
+    border-bottom: 1px solid $secondary-color;
+    border-left:1px solid $secondary-color ;
+  }
+  .corner_top2{
+    top: -2%;
+    left: -9px;
+    border-top: 1px solid $secondary-color;
+    border-left:1px solid $secondary-color ;
+  }
+
+  @include media-lg{
+    .itemSec{
+      flex-direction: row;
+    }
+  }

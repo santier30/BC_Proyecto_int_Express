@@ -80,7 +80,7 @@ const Shop = ()=>{
           </article>  
         </section>
 
-        <Vintus/>
+     
         </main>
    
     )

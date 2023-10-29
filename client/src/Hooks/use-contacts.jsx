@@ -65,13 +65,13 @@ const [phone,setPhone,phoneValidation]=useImput(
             );
           }
     return message.length ? message : "";}
-);
+,'');
 const reset =()=>{
     
         setEmail({ value: "", er: false }); 
         setMessage({ value: "", er: false }); 
         setName({ value: "", er: false }); 
-        setPhone({ value: "", er: false }); 
+        setPhone({ value: "", er: "" }); 
     
 };
 

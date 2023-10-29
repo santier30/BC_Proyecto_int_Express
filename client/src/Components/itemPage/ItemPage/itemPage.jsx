@@ -7,6 +7,7 @@ import img4 from '../../img/Trumpeter-MalbecBIG.webp'
 import img5 from '../../img/Trumpeter-Reserve-BlendBIG.webp'
 import img6 from '../../img/Trumpeter-Reserve-Rose-de-MalbecBIG.webp'
 import CartContext from '../../cart/CartContext'
+import ReactImageZoom from 'react-image-zoom';
 const ItemPage = ()=>{
   const { name } = useParams();
   const query = useLocation().search.slice(1);
@@ -24,9 +25,10 @@ const [quantity,setQuantity]=useState(1)
 let image = wineImages[wine.image]!==undefined?wineImages[wine.image]: wine.image;
 console.log(image)
 const ctx = useContext(CartContext)
+const props = {img: image,zoomPosition: "original",width: 300};
 
 const Add = ()=>{
-ctx.onAdd( wine.name,image, wine.price,quantity)}
+ctx.onAdd( wine.name,image, wine.price,wine.stock,quantity)}
     useEffect(() => {
   
         fetch(`/Vintus/Products/Buy/${name}?key=${query}`)
@@ -42,11 +44,11 @@ ctx.onAdd( wine.name,image, wine.price,quantity)}
     return(<main className="itemPage">
       <section className="itemSec">
         <article className="itemImg" >
-          <img src={image} alt={name} />
+          {image && <ReactImageZoom {...props}/>}
           <img src={image} alt={name}  style={{height: '110px',width:' 110px'}}/>
         </article>
         <article className="itemArt">
-          <h2 className="under">{name}</h2>
+          <h2 className="under">{name + ` (${wine.stock})`}</h2>
           <h3 className="under" >CONTENIDO</h3>
           <p className="under">{wine.long_description}</p>
 
@@ -66,6 +68,10 @@ ctx.onAdd( wine.name,image, wine.price,quantity)}
           </div>
 
         </article>
+        <div className="corner_top1"></div>
+        <div className="corner_botom1"></div>
+        <div className="corner_top2"></div>
+        <div className="corner_botom2"></div>
       </section>
 
     </main>)

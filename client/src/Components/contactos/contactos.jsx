@@ -9,12 +9,13 @@ const post = usePost('Enviando mensaje','Mensaje enviado!','Error al enviar mens
 
   const submitHandler = (event) => {
     event.preventDefault();
+    console.log('a')
     if (
       name.er==="" && email.er==="" && phone.er==="" && message.er===""
     ) {
+      post({name:name.value,email:email.value,phone:phone.value,message:message.value},"/Vintus/Users/Message")
         reset()
-        // event.target.submit();
-        post({name:name.value,email:email.value,phone:phone.value,message:message.value},"/Vintus/Users/Message")
+        
     } 
   };
     return(

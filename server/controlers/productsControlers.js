@@ -225,10 +225,7 @@ const keyFetch = async ()=>{
 
 }
 
-if(key[0]){
-  keyFetch()
-}else{nameFetch()}
-
+key[0]?keyFetch():nameFetch();
 
 
 }
